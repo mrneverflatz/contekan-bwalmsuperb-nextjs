@@ -11,7 +11,6 @@ export async function POST(request) {
   if (body.email === "admin@admin.com" && body.password === "admin") {
     const token = jwt.sign({ email: body.email, role: body.role }, "shhhhh");
 
-    console.log(body);
     // const token = await new SignJWT({
     //   username: body.username,
     //   role: "admin", // Set your own roles

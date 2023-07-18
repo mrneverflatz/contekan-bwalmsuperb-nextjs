@@ -14,14 +14,19 @@ export async function Navbar() {
         {auth ? (
           <>
             <li>
-              <Link href={`/courses`}>My Courses</Link>
+              <Link href={`/courses?contents=1`}>My Courses</Link>
             </li>
-            <li>
-              <Link href={`/students`}>My Students</Link>
-            </li>
-            <li>
-              <Link href={`/settings`}>Settings</Link>
-            </li>
+
+            {auth.role === "company" && (
+              <>
+                <li>
+                  <Link href={`/students`}>My Students</Link>
+                </li>
+                <li>
+                  <Link href={`/settings`}>Settings</Link>
+                </li>
+              </>
+            )}
 
             <li className="relative group">
               <Logout />

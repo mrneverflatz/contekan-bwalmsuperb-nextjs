@@ -14,9 +14,9 @@ export default function Courses(req) {
         <h1 className="text-4xl">My Courses</h1>
         <Link
           className="px-6 text-center py-4 rounded-full bg-gray-100"
-          href={`/courses/new`}
+          href={`/courses?contents=1`}
         >
-          New
+          Find New Course
         </Link>
       </div>
 
@@ -33,12 +33,7 @@ export default function Courses(req) {
                     <span className="font-bold">{item.name}</span>
                   </div>
                   <span className="ml-auto">{item.students} Students</span>
-                  <Link
-                    className="px-4 py-2 rounded-full bg-slate-200"
-                    href={`/courses/a8s6da8d567a5sd6/edit?contents=1`}
-                  >
-                    Edit Course
-                  </Link>
+
                   <Link
                     className="px-4 py-2 rounded-full bg-slate-200"
                     href={`/courses/a8s6da8d567a5sd6/watch`}
